@@ -6,15 +6,6 @@ let app= express();
 app.use(cors());
 app.use(express.json());
 
-// let con = mysql2.createConnection
-// (
-//     {
-//         host: "localhost",
-//         user:"root",
-//         password:"Madhura#3005",
-//         database:"mern"
-//     }
-// );
 
 let con = mysql2.createConnection(
     {
@@ -63,4 +54,5 @@ app.delete("/delete/:id",(request,response)=>{
         }
     })
 })
+
 app.listen(9000,()=>{console.log("Express is Ready")});
